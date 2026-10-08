@@ -17,12 +17,7 @@ jobs:
       - name: Build APK
         run: |
           unzip -o StatusWorld-MVP.zip -d extracted
-          ls extracted/
-          PROJECT=$(find extracted -name "build.gradle" | head -n 1 | xargs dirname)
-          echo "Project at $PROJECT"
-          cd "$PROJECT"
-          cd ..
-          pwd
+          cd extracted
           ls -la
           gradle assembleDebug --no-daemon
       - name: Upload APK

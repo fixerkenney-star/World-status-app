@@ -26,7 +26,6 @@ jobs:
         run: |
           unzip -o StatusWorld-MVP.zip -d extracted
           cd extracted
-          sed -i 's/gradle-8.7-bin.zip/gradle-8.13-bin.zip/' gradle/wrapper/gradle-wrapper.properties
           ls -la
           gradle assembleDebug --no-daemon
 
